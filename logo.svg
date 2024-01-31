@@ -1,0 +1,10 @@
+<svg width="300" height="200">
+    <!-- Shape -->
+    <rect width="100%" height="100%" fill="yellow" />
+  
+    <!-- Text -->
+    <text x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" fill="undefined" font-size="16" font-family="Arial">
+      man
+    </text>
+  </svg>
+  
