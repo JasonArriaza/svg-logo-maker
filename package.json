@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "directories": {
-    "example": "examples",
     "lib": "lib"
   },
   "scripts": {
@@ -13,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^9.2.13",
+    "inquirer": "^6.5.2",
     "jest": "^29.7.0"
   }
 }
