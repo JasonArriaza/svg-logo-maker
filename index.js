@@ -1,19 +1,19 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateSVG = require("./lib/shapes");
+const SvgGenerator = require('./lib/svgGenerator');
 
 
 
 // TODO: Create an array of questions for user input
 const questions = [
     //objects of questions
-    // {
-    //     type: 'list',
-    //     name: 'shape',
-    //     message: 'What shape would you like to have?',
-    //     choices: ['Triangle', 'Circle', 'Square'],
-    // },
+    {
+        type: 'list',
+        name: 'shape',
+        message: 'What shape would you like to have?',
+        choices: ['Triangle', 'Circle', 'Square'],
+    },
     {
         type: 'input',
         name: 'shapeColor',
@@ -42,8 +42,9 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
         .then((answers) => {
-            const logo = generateSVG(answers);
-            console.log(logo);
+            const logoGenerator = new SvgGenerator(answers.letters, answers.lettersColor, answers.shape, answers.shapeColor);
+            const logo = logoGenerator.generate();
+            
             console.log(answers);
 
             writeToFile('logo.svg', logo);
