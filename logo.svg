@@ -1,6 +1,6 @@
 
             <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-                <polygon points="150,10 250,190 50,190" fill="red" />
-                <text x="100" y="100" fill="blue">tri</text>
+                <circle cx="150" cy="100" r="50" fill="white" />
+                <text x="100" y="100" fill="black">arc</text>
             </svg>
         
